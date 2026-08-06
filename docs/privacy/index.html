@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--
+  プライバシーポリシー。取得する情報・しない情報と、開示等請求の窓口を扱う。
+  書き換えるときは運営の編集規約に従うこと。
+-->
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>プライバシーポリシー — Arch</title>
+<meta name="description" content="Archが取得する情報・取得しない情報と、開示等のご請求の窓口。">
+<style>
+  :root {
+    --bg: #F8FAF8; --surface: #F2F4F2; --surface-2: #ECEEEC;
+    --text: #191C1B; --text-muted: #3F4945;
+    --primary: #006B5D; --outline: #BEC9C4; --accent: #9C4332;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #191C1B; --surface: #1D201F; --surface-2: #232726;
+      --text: #E1E3E1; --text-muted: #BEC9C4;
+      --primary: #80D5C3; --outline: #3F4945; --accent: #FFB4A2;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text); line-height: 1.8; font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+  }
+  a { color: var(--primary); }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 20px; }
+  header.site { border-bottom: 1px solid var(--outline); background: var(--surface); }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; flex-wrap: wrap; }
+  .brand { font-weight: 700; font-size: 20px; letter-spacing: .04em; text-decoration: none; color: var(--text); }
+  h1 { font-size: clamp(24px, 5vw, 32px); margin: 40px 0 8px; }
+  .updated { color: var(--text-muted); font-size: 14px; margin: 0 0 28px; }
+  nav.toc { background: var(--surface); border: 1px solid var(--outline); border-radius: 12px; padding: 14px 20px; margin-bottom: 32px; }
+  nav.toc ul { margin: 8px 0 0; padding-left: 20px; }
+  nav.toc li { margin: 4px 0; }
+  h2 { font-size: 20px; margin: 40px 0 8px; padding-top: 12px; border-top: 1px solid var(--outline); }
+  h3 { font-size: 17px; margin: 26px 0 4px; }
+  p { margin: 8px 0; }
+  ul.body, ol.body { margin: 8px 0; padding-left: 22px; }
+  ul.body li, ol.body li { margin: 6px 0; }
+  .muted { color: var(--text-muted); }
+  .note { background: var(--surface-2); border-left: 4px solid var(--primary); padding: 12px 16px; border-radius: 0 10px 10px 0; font-size: 15px; }
+  table.spec { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 15px; }
+  table.spec th, table.spec td { border: 1px solid var(--outline); padding: 12px 14px; text-align: left; vertical-align: top; }
+  table.spec th { background: var(--surface); width: 32%; font-weight: 700; }
+  @media (max-width: 560px) {
+    table.spec th, table.spec td { display: block; width: 100%; border-bottom: none; }
+    table.spec tr { display: block; border-bottom: 1px solid var(--outline); }
+    table.spec td { border-top: none; }
+  }
+  .addr { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 15px; user-select: all; word-break: break-all; }
+  footer.site { border-top: 1px solid var(--outline); background: var(--surface); margin-top: 48px; padding: 24px 0 48px; font-size: 14px; color: var(--text-muted); }
+  footer.site ul { list-style: none; padding: 0; margin: 0 0 12px; display: flex; gap: 18px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../">Arch</a>
+    <nav><a href="../">トップへ</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>プライバシーポリシー</h1>
+  <p class="updated">最終更新：準備中</p>
+
+  <nav class="toc">
+    <strong>目次</strong>
+    <ul>
+      <li><a href="#policy">1. 基本方針</a></li>
+      <li><a href="#operator">2. 事業者情報</a></li>
+      <li><a href="#collect">3. 取得する情報・取得しない情報</a></li>
+      <li><a href="#purpose">4. 利用目的</a></li>
+      <li><a href="#third-party">5. 第三者への提供</a></li>
+      <li><a href="#security">6. 安全管理のための措置</a></li>
+      <li><a href="#request">7. 開示・訂正・利用停止・削除等のご請求</a></li>
+      <li><a href="#cookie">8. Cookie等について</a></li>
+      <li><a href="#minor">9. 年齢の条件</a></li>
+      <li><a href="#incident">10. 漏えい等が起きたとき</a></li>
+      <li><a href="#change">11. 本ポリシーの変更</a></li>
+      <li><a href="#contact">12. お問い合わせ窓口</a></li>
+    </ul>
+  </nav>
+
+  <h2 id="policy">1. 基本方針</h2>
+  <p>Archは中央のサーバーを持たないP2P型のSNSであり、投稿・メッセージ等の内容を運営（Arch提供元）が
+  集約して保持しない設計です。これを踏まえ、本ポリシーは次の考え方に立ちます。</p>
+  <ol class="body">
+    <li><strong>取得しないことを最優先します。</strong>技術的に取得を避けられる情報は、取得しない設計を優先します。</li>
+    <li><strong>取得する場合は最小限にします。</strong>保存する範囲と期間を必要最小限にとどめます。</li>
+    <li><strong>該当する前提で義務を果たします。</strong>「個人情報取扱事業者に当たらない」ことを狙うのではなく、
+    当たる前提で本ポリシーに定める義務を履行します。</li>
+    <li><strong>暗号化により内容を関知しません。</strong>会員限定ルームや個人間のやり取りは端末どうしで暗号化し、
+    運営を含む第三者が内容を読めない設計とします。</li>
+  </ol>
+
+  <h2 id="operator">2. 事業者情報</h2>
+  <table class="spec">
+    <tr><th>事業者名</th><td>合同会社アフタージェイ（AfterJ LLC）</td></tr>
+    <tr><th>所在地</th><td>札幌市東区北27条東17丁目</td></tr>
+    <tr><th>個人情報保護管理者</th><td>代表社員 船橋 公司</td></tr>
+    <tr><th>連絡先</th><td class="addr">afj20250402+arch_support@gmail.com</td></tr>
+  </table>
+  <p class="muted">上記の連絡先は、法令に基づく開示等のご請求をお受けするための窓口です。
+  アプリの使い方に関する一般のお問い合わせ窓口ではありません（<a href="#contact">12章</a>）。</p>
+
+  <h2 id="collect">3. 取得する情報・取得しない情報</h2>
+  <p>Archでは情報が2つに分かれます。<strong>端末の中だけに保たれ運営が取得しないもの</strong>と、
+  <strong>運営が関与しうる経路を通じて運営が取得しうるもの</strong>です。</p>
+
+  <h3>3-1. 運営が取得しないもの</h3>
+  <ul class="body">
+    <li>投稿の本文・画像・動画・音声、チャットメッセージの内容</li>
+    <li>会員限定ルームでのやり取りの内容</li>
+    <li>フォロー関係・閲覧履歴などの利用状況</li>
+  </ul>
+  <p>これらは各端末が保持し、暗号化された状態で端末どうしを直接流れます。運営が管理するデータベースには保存しません。</p>
+
+  <h3>3-2. 運営が取得しうるもの</h3>
+  <table class="spec">
+    <tr>
+      <th>アカウントの情報</th>
+      <td>公開鍵にもとづく利用者ID、任意で登録される表示名・アイコン等。
+      鍵はご利用者の端末上で作られ、運営を含むいかなる第三者にも預けられません。
+      運営がIDを把握しうるのは、ご利用者が自ら公開し、または接続した場合に限られます。</td>
+    </tr>
+    <tr>
+      <th>通信に伴う情報</th>
+      <td>接続時のIPアドレス・接続日時等。運営は常時稼働するサーバーを持ちませんが、
+      運営が間欠的に起動するノードと接続した際に、当該ノードがこれらを一時的に取得することがあります。
+      保持する期間は必要最小限とし、内容を認識できない形での処理を優先します。</td>
+    </tr>
+    <tr>
+      <th>端末・利用状況の情報</th>
+      <td>OSの種別、アプリのバージョン、不具合の記録等。品質改善のため、
+      ご利用者が送信に同意された場合にのみ取得します。</td>
+    </tr>
+    <tr>
+      <th>稲荷寿司に<br>関する情報</th>
+      <td>稲荷寿司は食品ではなく、Archアプリの中で応援に使うものの呼び名です。
+      その鍵の管理は運営とは別の事業者が担い、
+      <strong>運営は資金やお客様の決済情報を直接保持しません</strong>。</td>
+    </tr>
+    <tr>
+      <th>お問い合わせの内容</th>
+      <td>ご連絡いただいた際の、お名前・メールアドレス・お問い合わせ内容。</td>
+    </tr>
+  </table>
+
+  <h2 id="purpose">4. 利用目的</h2>
+  <p>取得した情報は、次の目的の範囲内でのみ利用します。</p>
+  <ol class="body">
+    <li>アカウントの発行と認証</li>
+    <li>端末どうしの接続の確立</li>
+    <li>不正アクセス・なりすまし・迷惑行為への対応</li>
+    <li>品質の維持・改善（同意をいただいた場合に限ります）</li>
+    <li>お問い合わせへの対応</li>
+    <li>法令に基づく対応（開示のご請求、漏えいの報告等）</li>
+  </ol>
+  <p>目的の達成に必要な範囲を超えて個人情報を取り扱いません。目的を変更する場合は、
+  変更後の目的を本ポリシーの改訂により公表します。</p>
+
+  <h2 id="third-party">5. 第三者への提供</h2>
+  <ul class="body">
+    <li>法令に基づく場合を除き、ご本人の同意なく個人情報を第三者へ提供しません。</li>
+    <li>稲荷寿司の鍵の管理を担う事業者は、認証のためメールアドレス等をその事業者自身のサービスとして取得・処理します。
+    これは運営による第三者提供ではなく、<strong>ご利用者がその事業者のサービスを直接ご利用になる構造</strong>です。
+    当該事業者のプライバシーポリシーが別途適用されます。
+    なおアカウントの鍵の管理はこの事業者を介さず端末上で完結するため、この経路での情報の提供は生じません。</li>
+    <li>P2Pという性質上、公開の設定で投稿された情報は、ネットワークに参加する他の端末へ直接流れます。
+    これは運営による第三者提供ではなく、ご利用者ご自身の公開行為にもとづく流通です。</li>
+  </ul>
+  <p class="muted">運営の業務の一部を外部の事業者へ委託する場合は、委託先に対して適切な監督を行います。</p>
+
+  <h2 id="security">6. 安全管理のための措置</h2>
+  <ul class="body">
+    <li>会員限定ルーム・個人間のやり取りの端末どうしでの暗号化</li>
+    <li>中継・一時保存を行うノードでの保存期間の最小化</li>
+    <li>可能な限り、内容を認識できない形での一時保存</li>
+    <li>公開鍵暗号にもとづくアクセス制御・なりすまし対策</li>
+  </ul>
+
+  <h2 id="request">7. 開示・訂正・利用停止・削除等のご請求</h2>
+  <p>P2Pという構造のため、対応できる範囲が端末ごとに異なります。</p>
+  <ul class="body">
+    <li><strong>投稿・メッセージの削除</strong>——削除（撤回）の指示は、投稿されたご本人の鍵によってのみ発行できます。
+    各端末はこれを尊重して伝えます。運営が他の方の投稿を強制的に削除する機能は設けていません。</li>
+    <li><strong>運営が保持する情報（3-2）の開示・訂正・利用停止・削除のご請求</strong>——法令の定めに従い、
+    ご本人からのご請求をお受けし、遅滞なく対応します。窓口は<a href="#operator">2章</a>のメールアドレスです。</li>
+    <li><strong>運営のノードでの配信停止</strong>——運営が間欠的に起動するノードが一時保存・中継している情報について、
+    権利侵害等のお申し出を受けた場合は、当該ノードからの配信を停止します。
+    ただし、すでに他の方の端末へ渡った情報に及ぶものではありません。</li>
+  </ul>
+
+  <h2 id="cookie">8. Cookie等について</h2>
+  <p>この公式サイトでは、アクセス解析・広告のためのCookieやトラッカーを設置していません。
+  外部のフォント・スクリプト・画像の読み込みも行いません。</p>
+  <p>ご利用者が外部のサービスのウェブ画面をご利用になる場合は、当該サービスのCookie等が用いられることがあり、
+  その取扱いは当該サービスのプライバシーポリシーに従います。</p>
+
+  <h2 id="minor">9. 年齢の条件</h2>
+  <p>年齢の基準は段階的に設けます。国・地域を問わず世界共通の基準とし、いずれの段階でも
+  法定代理人（保護者）の同意による手続きは設けません。基準の年齢に満たない方はご登録いただけません。</p>
+  <ul class="body">
+    <li><strong>2026年内</strong>——ご登録・お支払いのいずれも18歳以上の方のみ。</li>
+    <li><strong>2027年以降</strong>——SNSとしてのご登録の下限を16歳へ引き下げます。
+    稲荷寿司の購入・消費などの機能は引き続き18歳以上の方のみです。</li>
+  </ul>
+
+  <h2 id="incident">10. 漏えい等が起きたとき</h2>
+  <p>個人データの漏えい・滅失・毀損等が生じ、法令の定める要件に該当する場合は、
+  個人情報保護委員会への報告およびご本人への通知を、法令に定められた期限内に行います。</p>
+
+  <h2 id="change">11. 本ポリシーの変更</h2>
+  <p>本ポリシーは、法令の変更等に応じて改訂することがあります。
+  重要な変更を行う場合は、アプリ内のお知らせまたはこのサイトでの公表によりお知らせします。</p>
+
+  <h2 id="contact">12. お問い合わせ窓口</h2>
+  <p>運営は、アプリの使い方などの一般的なお問い合わせについて、中央のサポート窓口（メール・電話等）を設けていません。
+  アプリ内のAIとの対話、または利用者どうしの掲示板・QAでの解決を基本としています。</p>
+  <p>一方、<strong>個人情報の取扱いに関する開示・訂正・利用停止等の法令上のご請求</strong>は、
+  次の窓口でお受けします。</p>
+  <p class="addr">afj20250402+arch_support@gmail.com</p>
+  <p class="note">個人情報保護管理者：代表社員 船橋 公司</p>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <ul>
+      <li><a href="../">トップ</a></li>
+      <li><a href="../terms/">利用規約・免責事項</a></li>
+      <li><a href="../tokushoho/">特定商取引法に基づく表記</a></li>
+    </ul>
+    <p>&copy; 2026 AfterJ LLC</p>
+  </div>
+</footer>
+
+</body>
+</html>
